@@ -3,22 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Рецепты</title>
+  <title>Clean Recipes</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="app">
-    <div id="grid-view"></div>
-    <div id="detail-view">
-      <div class="detail-header">
-        <button class="back-btn" id="back-btn">←</button>
-        <img id="detail-img" src="" alt="">
+    <aside id="sidebar">
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="soup">Супы</button>
+      <button class="filter-btn" data-filter="pizza">Пиццы</button>
+    </aside>
+    <main id="main">
+      <div id="grid-view"></div>
+      <div id="detail-view">
+        <div class="detail-header">
+          <button class="back-btn" id="back-btn">←</button>
+          <img id="detail-img" src="" alt="">
+        </div>
+        <div class="detail-content">
+          <h1 id="detail-title"></h1>
+          <pre id="detail-recipe"></pre>
+        </div>
       </div>
-      <div class="detail-content">
-        <h1 id="detail-title"></h1>
-        <pre id="detail-recipe"></pre>
-      </div>
-    </div>
+    </main>
   </div>
   <script src="app.js"></script>
 </body>
